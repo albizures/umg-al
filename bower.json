@@ -1,0 +1,20 @@
+{
+  "name": "umg-al",
+  "version": "0.0.0",
+  "authors": [
+    "Jose Albizures <albizures3601@gmail.com>"
+  ],
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3",
+    "angular": "~1.4.5",
+    "materialize": "~0.97.0"
+  }
+}

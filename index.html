@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <script src="http://localhost:8080/livereload.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <title>Algebra Lineal</title>
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" media="screen" title="no title" charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="Main" class="indigo darken-2">
+    <main class="item {{seccionName}}" ng-class="{'active': mainActive  , 'second' : secondMain }">
+      <ul class="collection hoverable">
+        <li class="collection-item" ng-click="select('multiplicacion')">Multiplicacion</li>
+        <li class="collection-item" ng-click="select('suma')">Suma</li>
+        <li class="collection-item" ng-click="select('resta')">Resta</li>
+        <li class="collection-item" ng-click="select('gauss')">Gauss</li>
+      </ul>
+    </main>
+    <i class="material-icons close" ng-class="activeClose ? 'active': '' " ng-click="close()">close</i>
+    <div class="seccion multiplicacion " ng-class="seccionActive? 'active' : ''">
+      <div class="card hoverable row">
+        <div ng-include="url"></div>
+      </div>
+    </div>
+
+
+    <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+    <script src="js/multiplicacion.controller.js" charset="utf-8"></script>
+  </body>
+</html>

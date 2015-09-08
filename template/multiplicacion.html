@@ -1,0 +1,27 @@
+<div class="col l12" ng-controller="MultiplicacionCtrl">
+  <div class="row">
+			<p class="left">Ingrese los datos las matrices para multiplicar</p>
+			<button ng-disabled="!agregar" ng-click="cambiarFilas(1)" class="waves-effect waves-light btn right"><i class="material-icons">add</i></button>
+			<button ng-disabled="!quitar" ng-click="cambiarFilas(-1)" class="waves-effect waves-light btn right"><i class="material-icons">remove</i></button>
+	</div>
+  <div class="row">
+    <div class="matriz offset-l col l5 ">
+      <div ng-repeat="i in getNumber(vector.n * vector.n) track by $index" class="col l{{12/vector.n}}">
+			  <input type="number">
+		  </div>
+    </div>
+    <div class="matriz offset-l col l5 right">
+      <div ng-repeat="i in getNumber(vector.n * vector.n) track by $index" class="col l{{12/vector.n}}">
+			  <input type="number">
+		  </div>
+    </div>
+  </div>
+  <div class="row">
+    <h5>Resultado</h5>
+    <div class="matriz offset-l3 col l5">
+      <div ng-repeat="i in getNumber(vector.n * vector.n) track by $index" class="col l{{12/vector.n}}">
+			  <input type="number">
+		  </div>
+    </div>
+  </div>
+</div>

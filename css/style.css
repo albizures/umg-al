@@ -1,0 +1,118 @@
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body {
+  overflow: hidden;
+}
+main.item {
+  width: 400px;
+  margin: 100px auto;
+  position: static;
+  background: #fff;
+  border-radius: 3px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+main.item .collection {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 400px;
+  overflow: hidden;
+}
+main.item .collection .collection-item {
+  cursor: pointer;
+}
+main.item.active {
+  width: 173px;
+  border-radius: 50%;
+}
+main.item.active .collection {
+  border: 0;
+  border-radius: 50%;
+  height: 173px;
+  width: 173px;
+}
+main.item.active .collection * {
+  opacity: 0;
+  display: none;
+}
+main.item.second {
+  -webkit-transform: scale(10);
+  -moz-transform: scale(10);
+  -ms-transform: scale(10);
+  -o-transform: scale(10);
+  transform: scale(10);
+}
+.seccion,
+.close {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+}
+.close {
+  margin: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 40px;
+  right: -100%;
+  z-index: 200;
+}
+.close.active {
+  right: 0%;
+}
+.seccion {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  left: -100%;
+  overflow-y: none;
+}
+.seccion div.card {
+  width: 900px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.seccion.active {
+  left: 0;
+  overflow-y: auto;
+}
+.matriz {
+  position: relative;
+  padding: 10px;
+  display: inline-block;
+}
+.matriz input {
+  height: 2rem;
+  text-align: center;
+}
+.matriz:before,
+.matriz:after {
+  top: 0px;
+  content: '';
+  position: absolute;
+  border-top: 2px solid rgba(0,0,0,0.5);
+  border-bottom: 2px solid rgba(0,0,0,0.5);
+  width: 6px;
+  height: 100%;
+}
+.matriz:before {
+  border-left: 2px solid rgba(0,0,0,0.5);
+  left: 0px;
+}
+.matriz:after {
+  border-right: 2px solid rgba(0,0,0,0.5);
+  right: 0;
+}

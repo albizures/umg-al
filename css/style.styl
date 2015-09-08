@@ -1,0 +1,97 @@
+timeTrans = 0.5s
+animation-transition(n)
+	-webkit-transition all n ease-in-out
+	-moz-transition all n ease-in-out
+	-ms-transition all n ease-in-out
+	-o-transition all n ease-in-out
+	transition all n ease-in-out
+scale-transform(n)
+	-webkit-transform: scale(n)
+	-moz-transform: scale(n)
+	-ms-transform: scale(n)// IE9 only
+	-o-transform: scale(n)
+	transform: scale(n)
+
+
+*
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+body
+	overflow hidden;
+main.item
+	width 400px
+	margin 100px auto
+	position static
+	background: white
+	border-radius: 3px;
+	animation-transition(timeTrans)
+	.collection
+		animation-transition(timeTrans)
+		width 400px
+		overflow hidden;
+		.collection-item
+			cursor pointer
+	&.active
+		width: 173px
+		border-radius: 50%
+		.collection
+			border 0
+			border-radius: 50%
+			height: 173px
+			width: 173px
+			*
+				opacity: 0
+				display none
+	&.second
+		scale-transform(10)
+
+.seccion,.close
+	animation-transition(timeTrans)
+	position fixed
+	top 0
+.close
+	margin 20px
+	cursor pointer
+	color white
+	font-size 40px
+	right -100%
+	z-index 200
+	&.active
+		right 0%
+
+.seccion
+	padding 10px
+	height 100%
+	width 100%
+	left -100%
+	overflow-y: none;
+	div.card
+		width 900px
+		padding 20px
+		margin 20px auto
+	&.active
+		left 0
+		overflow-y: auto;
+.matriz
+	position: relative
+	padding 10px
+	display inline-block
+	input
+		height: 2rem;
+		text-align center
+	&:before, &:after
+		top: 0px;
+		content: '';
+		position: absolute;
+		border-top: 2px solid rgba(0, 0, 0, 0.5);
+		border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+		width: 6px;
+		height: 100%;
+	&:before
+		border-left: 2px solid rgba(0, 0, 0, .5);
+		left: 0px;
+	&:after
+		border-right: 2px solid rgba(0, 0, 0, .5);
+		right 0
