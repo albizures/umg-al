@@ -1,27 +1,32 @@
 <div class="col l12" ng-controller="MultiplicacionCtrl">
   <div class="row">
-			<p class="left">Ingrese los datos las matrices para multiplicar</p>
-			<button ng-disabled="!agregar" ng-click="cambiarFilas(1)" class="waves-effect waves-light btn right"><i class="material-icons">add</i></button>
+    <div class="col l8">
+      <p class="">Ingrese los datos las matrices para multiplicar</p>
+      <p class="">Los espacios vacios se consideraran como ceros</p>
+    </div>
+		<div class="col l4">
+      <button ng-disabled="!agregar" ng-click="cambiarFilas(1)" class="waves-effect waves-light btn right"><i class="material-icons">add</i></button>
 			<button ng-disabled="!quitar" ng-click="cambiarFilas(-1)" class="waves-effect waves-light btn right"><i class="material-icons">remove</i></button>
+		</div>
 	</div>
   <div class="row">
     <div class="matriz offset-l col l5 ">
-      <div ng-repeat="i in getNumber(vector.n * vector.n) track by $index" class="col l{{12/vector.n}}">
-			  <input type="number">
-		  </div>
+        <div  class="col l{{12/matriz.n}}" ng-repeat="i in getNumber(matriz.n * matriz.n,'primera') track by $index">
+  			  <input type="number" ng-model="getNumber(matriz.n * matriz.n,'primera')[$index]">
+  		  </div>
     </div>
     <div class="matriz offset-l col l5 right">
-      <div ng-repeat="i in getNumber(vector.n * vector.n) track by $index" class="col l{{12/vector.n}}">
-			  <input type="number">
-		  </div>
+      <div  class="col l{{12/matriz.n}}" ng-repeat="i in getNumber(matriz.n * matriz.n,'segunda') track by $index">
+        <input type="number" ng-model="getNumber(matriz.n * matriz.n,'segunda')[$index]">
+      </div>
     </div>
   </div>
   <div class="row">
     <h5>Resultado</h5>
     <div class="matriz offset-l3 col l5">
-      <div ng-repeat="i in getNumber(vector.n * vector.n) track by $index" class="col l{{12/vector.n}}">
-			  <input type="number">
-		  </div>
+      <div  class="col l{{12/matriz.n}}" ng-repeat="i in getNumber(matriz.n * matriz.n,'resultado') track by $index">
+        <input type="number" ng-model="getNumber(matriz.n * matriz.n,'resultado')[$index]">
+      </div>
     </div>
   </div>
 </div>
