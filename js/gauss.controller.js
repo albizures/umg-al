@@ -43,7 +43,7 @@ angular.module('app')
 		    var n = matriz.length;
 
 		    for (var i=0; i<n; i++) {
-		        // Search for maximum in this column
+						// Busca el maximo en esta columna
 		        var maxEl = Math.abs(matriz[i][i]);
 		        var maxRow = i;
 		        for(var k=i+1; k<n; k++) {
@@ -52,15 +52,12 @@ angular.module('app')
 		                maxRow = k;
 		            }
 		        }
-
-		        // Swap maximum row with current row (column by column)
 		        for (var k=i; k<n+1; k++) {
 		            var tmp = matriz[maxRow][k];
 		            matriz[maxRow][k] = matriz[i][k];
 		            matriz[i][k] = tmp;
 		        }
 
-		        // Make all rows below this one 0 in current column
 		        for (k=i+1; k<n; k++) {
 		            var c = -matriz[k][i]/matriz[i][i];
 		            for(var j=i; j<n+1; j++) {
@@ -73,7 +70,6 @@ angular.module('app')
 		        }
 		    }
 
-		    // Solve equation matrizx=b for an upper triangular matrix matriz
 		    var x= new Array(n);
 		    for (var i=n-1; i>-1; i--) {
 		        x[i] = matriz[i][n]/matriz[i][i];
