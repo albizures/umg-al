@@ -89,12 +89,14 @@ main.item.second {
   left: 0;
   overflow-y: auto;
 }
-.matriz {
+.matriz,
+.resultado {
   position: relative;
   padding: 10px;
   display: inline-block;
 }
-.matriz input {
+.matriz input,
+.resultado input {
   height: 2rem;
   text-align: center;
 }

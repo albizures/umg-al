@@ -1,3 +1,28 @@
-<div class="col l12">
-  gauss
+<div class="col l12" ng-controller="GaussCtrl">
+  <div class="row">
+    <div class="col l8">
+      <p>Ingrese los datos de la ecuacion</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="matriz offset-l col l8 ">
+        <div  class="col l3" ng-repeat="i in getNumber(matriz.n+1,'primera') track by $index">
+  			  <input type="number" placeholder="x{{$index+1}}" ng-model="getNumber(matriz.n+1,'primera')[$index]">
+  		  </div>
+        <div  class="col l3" ng-repeat="i in getNumber(matriz.n+1,'segunda') track by $index">
+          <input type="number" placeholder="y{{$index+1}}" ng-model="getNumber(matriz.n+1,'segunda')[$index]">
+        </div>
+        <div  class="col l3" ng-repeat="i in getNumber(matriz.n+1,'tercera') track by $index">
+          <input type="number" placeholder="z{{$index+1}}"  ng-model="getNumber(matriz.n+1,'tercera')[$index]">
+        </div>
+    </div>
+    <div class="col l3 right resultado">
+      <div  class="col l12" ng-repeat="i in resultado track by $index">
+        <input type="number" ng-model="resultado[$index]">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+
+  </div>
 </div>
