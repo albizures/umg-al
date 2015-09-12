@@ -25,7 +25,7 @@ angular.module('app',[])
 				  $scope.animation = false;
 			  },500);
       }, 900);
-      $scope.url = '/template/'+ name +'.html';
+      $scope.url = '/umg-al/template/'+ name +'.html';
     }
     $scope.close = function () {
       if($scope.animation) return;
