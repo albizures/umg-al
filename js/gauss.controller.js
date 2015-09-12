@@ -12,6 +12,7 @@ angular.module('app')
       }else{
         $scope.matriz[nombre] = new Array(num);
       }
+			
 
       return $scope.matriz[nombre];
     }
