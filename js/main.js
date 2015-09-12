@@ -25,7 +25,7 @@ angular.module('app',[])
 				  $scope.animation = false;
 			  },500);
       }, 900);
-      $scope.url = '/umg-al/template/'+ name +'.html';
+      $scope.url = 'template/'+ name +'.html';
     }
     $scope.close = function () {
       if($scope.animation) return;
@@ -44,5 +44,4 @@ angular.module('app',[])
 			  },500);
       }, 900);
     }
-    //$scope.url = '/template/multiplicacion.html';
   });
